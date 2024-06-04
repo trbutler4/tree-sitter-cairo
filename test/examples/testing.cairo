@@ -1,10 +1,9 @@
-func run_tests() {
+fn run_tests() {
     assert(bool::True(()), 1);
 }
 
-func assert(cond: bool, err_code: felt) {
-    if cond {
-    } else {
+fn assert(cond: bool, err_code: felt) {
+    if cond {} else {
         let data = array_new::<felt>();
         array_append::<felt>(data, err_code);
         panic(data);

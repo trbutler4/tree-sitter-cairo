@@ -1,6 +1,6 @@
-impl MyCopy of Copy::<Option::<(felt, felt)>>;
+impl MyCopy of Copy<Option<(felt, felt)>>;
 
-func foo(x: Option::<(felt, felt)>) -> Option::<felt> {
+fn foo(x: Option::<(felt, felt)>) -> Option::<felt> {
     let y = x;
     match x {
         Option::Some(x) => {
@@ -8,8 +8,6 @@ func foo(x: Option::<(felt, felt)>) -> Option::<felt> {
             Option::<felt>::Some(x)
         },
         // TODO(spapini): Replace with _.
-        Option::None(o) => {
-            return Option::<felt>::None(());
-        },
+        Option::None(o) => { return Option::<felt>::None(()); },
     }
 }
