@@ -126,19 +126,11 @@
           },
           {
             "type": "STRING",
-            "value": "I8IntoFelt252"
-          },
-          {
-            "type": "STRING",
             "value": "i16"
           },
           {
             "type": "STRING",
             "value": "i16_const"
-          },
-          {
-            "type": "STRING",
-            "value": "I16IntoFelt252"
           },
           {
             "type": "STRING",
@@ -150,10 +142,6 @@
           },
           {
             "type": "STRING",
-            "value": "I32IntoFelt252"
-          },
-          {
-            "type": "STRING",
             "value": "i64"
           },
           {
@@ -162,19 +150,11 @@
           },
           {
             "type": "STRING",
-            "value": "I64IntoFelt252"
-          },
-          {
-            "type": "STRING",
             "value": "i128"
           },
           {
             "type": "STRING",
             "value": "i128_const"
-          },
-          {
-            "type": "STRING",
-            "value": "I128IntoFelt252"
           },
           {
             "type": "STRING",
@@ -231,50 +211,6 @@
           {
             "type": "STRING",
             "value": "u256_sqrt"
-          },
-          {
-            "type": "STRING",
-            "value": "Felt252TryIntoU8"
-          },
-          {
-            "type": "STRING",
-            "value": "U8IntoFelt252"
-          },
-          {
-            "type": "STRING",
-            "value": "Felt252TryIntoU16"
-          },
-          {
-            "type": "STRING",
-            "value": "U16IntoFelt252"
-          },
-          {
-            "type": "STRING",
-            "value": "Felt252TryIntoU32"
-          },
-          {
-            "type": "STRING",
-            "value": "U32IntoFelt252"
-          },
-          {
-            "type": "STRING",
-            "value": "Felt252TryIntoU64"
-          },
-          {
-            "type": "STRING",
-            "value": "U64IntoFelt252"
-          },
-          {
-            "type": "STRING",
-            "value": "Felt252TryIntoU128"
-          },
-          {
-            "type": "STRING",
-            "value": "U128IntoFelt252"
-          },
-          {
-            "type": "STRING",
-            "value": "Felt252IntoU256"
           }
         ]
       }
