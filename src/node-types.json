@@ -2305,7 +2305,17 @@
   {
     "type": "primitive_type",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "integer_type",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "return_statement",

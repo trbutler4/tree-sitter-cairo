@@ -46,6 +46,7 @@ module.exports = grammar({
     primitive_type: ($) => prec(1, choice(
       "felt252", 
       "bool",
+      $.integer_type
     )),
 
     integer_type: ($) => prec(1, choice(

@@ -102,6 +102,10 @@
           {
             "type": "STRING",
             "value": "bool"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "integer_type"
           }
         ]
       }
