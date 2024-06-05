@@ -4,5 +4,6 @@ fn hash_chain(n: felt252) -> felt252 {
         return 0;
     }
 
+    core::gas::withdraw_gas_all(core::gas::get_builtin_costs()).expect('Out of gas');
     core::pedersen::pedersen(hash_chain(n - 1), n)
 }

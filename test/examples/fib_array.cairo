@@ -1,13 +1,20 @@
-// Returns an array of size n with the values of the Fibonacci sequence.
-fn fib(n: felt) -> Array::<felt> {
-    fib_inner(1, 1, n, array_new::<felt>())
+// Returns an array of size n with the values of the Fibonacci sequence, the length of the array,
+// and the value of the last element.
+fn fib(n: usize) -> (Array<felt252>, felt252, usize) {
+    let mut arr = array![];
+    arr.append(1);
+    arr.append(1);
+    fib_inner(n, ref arr);
+    let len = arr.len();
+    let last = arr[len - 1_usize];
+    return (arr, *last, len);
 }
 
-fn fib_inner(a: felt, b: felt, remaining: felt, arr: Array::<felt>) -> Array::<felt> {
-    if remaining == 0 {
-        return arr;
+fn fib_inner(n: usize, ref arr: Array<felt252>) {
+    let length = arr.len();
+    if n <= length {
+        return ();
     }
-
-    array_append::<felt>(arr, a);
-    fib_inner(b, a + b, remaining - 1, arr)
+    arr.append(*arr[length - 1_usize] + *arr[length - 2_usize]);
+    fib_inner(n, ref arr)
 }
