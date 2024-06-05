@@ -18,3 +18,20 @@ struct AnyStruct {
         (identifier)
         (primitive_type
             (integer_type))))
+
+
+============================
+simple const
+============================
+
+const EXAMPLE = 100;
+
+-----------------------------
+
+(source_file
+    (const
+        (identifier)
+        (literal_expression
+            (integer_literal))))
+
+

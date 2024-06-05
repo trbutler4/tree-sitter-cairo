@@ -25,7 +25,7 @@ module.exports = grammar({
     _expression: ($) =>
       choice(
         $._simple_identifier,
-        $.primitive_type, // TODO: move this?
+        $.primitive_type, // TODO: moves this?
         $.integer_type, // TODO: move this?
         $.path_expression,
         $.literal_expression,
@@ -322,6 +322,7 @@ module.exports = grammar({
         $.impl,
         $.struct,
         $.enum,
+        $.const
       ),
 
     module: ($) =>
@@ -407,6 +408,7 @@ module.exports = grammar({
         "}",
       ),
 
+
     enum: ($) =>
       seq(
         repeat($.attribute),
@@ -417,6 +419,15 @@ module.exports = grammar({
         commaSep1(field("member", $._struct_member)), // todo: make special node for enum members
         optional(","),
         "}",
+      ),
+
+    const: ($) => 
+      seq(
+          "const",
+          field("name", $.identifier),
+          optional($._type_clause),
+          optional(seq("=", field("value", $._expression))),
+          ";",
       ),
 
     use: ($) =>
