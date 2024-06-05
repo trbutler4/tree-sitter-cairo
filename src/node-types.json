@@ -1879,6 +1879,10 @@
         {
           "type": "integer_literal",
           "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
         }
       ]
     }
@@ -2707,6 +2711,11 @@
     }
   },
   {
+    "type": "string_literal",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "struct",
     "named": true,
     "fields": {
@@ -3466,6 +3475,10 @@
   },
   {
     "type": "&&",
+    "named": false
+  },
+  {
+    "type": "'",
     "named": false
   },
   {

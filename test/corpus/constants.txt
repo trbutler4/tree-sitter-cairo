@@ -112,3 +112,36 @@ const STRUCT_INSTANCE: AnyStruct = AnyStruct { a: 0, b: 1 };
               (integer_literal))))))
 
 
+========================================================
+enum const
+========================================================
+
+enum AnyEnum {
+    A: felt252,
+    B: (usize, u256)
+}
+
+const ENUM_INSTANCE: AnyEnum = AnyEnum::A('any enum');
+
+--------------------------------------------------------
+
+(source_file
+      (enum
+        (identifier)
+        (identifier)
+        (primitive_type)
+        (identifier)
+        (tuple_expression
+          (identifier)
+          (primitive_type
+            (integer_type))))
+      (const
+        (identifier)
+        (identifier)
+        (function_call_expression
+          (path_expression
+            (simple_path_segment
+              (identifier))
+            (simple_path_segment
+              (identifier)))
+            (string_literal))))

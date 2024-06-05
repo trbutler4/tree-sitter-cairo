@@ -96,9 +96,15 @@ module.exports = grammar({
     boolean_expression: () => choice("true", "false"),
 
     // Literal expressions
-    literal_expression: ($) => choice($.integer_literal),
+    literal_expression: ($) => 
+      choice(
+          $.integer_literal,
+          $.string_literal
+      ),
 
     integer_literal: () => /[0-9]+/,
+
+    string_literal: () => seq("'", /.*/, "'"),
 
     // Parenthesized expression
     parenthesized_expression: ($) =>

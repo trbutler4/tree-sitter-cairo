@@ -356,12 +356,33 @@
         {
           "type": "SYMBOL",
           "name": "integer_literal"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string_literal"
         }
       ]
     },
     "integer_literal": {
       "type": "PATTERN",
       "value": "[0-9]+"
+    },
+    "string_literal": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "'"
+        },
+        {
+          "type": "PATTERN",
+          "value": ".*"
+        },
+        {
+          "type": "STRING",
+          "value": "'"
+        }
+      ]
     },
     "parenthesized_expression": {
       "type": "SEQ",
