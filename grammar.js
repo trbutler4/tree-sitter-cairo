@@ -19,14 +19,14 @@ module.exports = grammar({
   rules: {
     source_file: ($) => repeat($._item),
 
-    identifier: ($) => /[a-zA-Z_][a-zA-Z0-9_]*/,
+    identifier: () => /[a-zA-Z_][a-zA-Z0-9_]*/,
 
     // == Expressions ==
     _expression: ($) =>
       choice(
         $._simple_identifier,
-        $.primitive_type,
-        $.integer_type,
+        $.primitive_type, // TODO: move this?
+        $.integer_type, // TODO: move this?
         $.path_expression,
         $.literal_expression,
         $.boolean_expression,
@@ -49,7 +49,7 @@ module.exports = grammar({
       $.integer_type
     )),
 
-    integer_type: ($) => prec(1, choice(
+    integer_type: () => prec(1, choice(
       "i8", 
       "i8_const",
       "i16",
@@ -204,7 +204,7 @@ module.exports = grammar({
     error_propagation_expression: ($) =>
       seq(field("expression", $._expression), "?"),
 
-    comment: ($) => token(seq("//", /.*/)),
+    comment: () => token(seq("//", /.*/)),
 
     // == Patterns == (used by match arms)
     _pattern: ($) =>
@@ -223,7 +223,7 @@ module.exports = grammar({
       prec(1, seq(optional($._modifier_list), field("name", $.identifier))),
     _modifier_list: ($) => commaSep1($.modifier),
 
-    modifier: ($) => choice("mut", "&"),
+    modifier: () => choice("mut", "&"),
 
     pattern_struct: ($) =>
       seq(
@@ -305,7 +305,7 @@ module.exports = grammar({
         optional($._no_panic_token),
       ),
 
-    _no_panic_token: ($) => "no_panic", // TODO: who knows?
+    _no_panic_token: () => "no_panic", // TODO: who knows?
 
     // == Struct Members ==
     _struct_member: ($) => seq(field("name", $.identifier), $._type_clause),

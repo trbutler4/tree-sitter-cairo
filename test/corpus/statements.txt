@@ -1,0 +1,19 @@
+============================
+basic let 
+============================
+
+fn main() {
+    let x = 2;
+}
+
+-----------------------------
+
+(source_file
+    (free_function
+        (identifier)
+        (block_expression
+            (let_statement
+                (pattern_identifier
+                    (identifier))
+                (literal_expression
+                    (integer_literal))))))
