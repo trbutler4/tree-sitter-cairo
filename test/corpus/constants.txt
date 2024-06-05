@@ -73,3 +73,42 @@ const EXAMPLE: u32 = 100;
             (integer_literal))))
 
 
+========================================================
+struct const
+========================================================
+
+struct AnyStruct {
+    a: u256,
+    b: u32
+}
+
+const STRUCT_INSTANCE: AnyStruct = AnyStruct { a: 0, b: 1 };
+
+--------------------------------------------------------
+
+(source_file
+    (struct
+        (identifier)
+        (identifier)
+        (primitive_type
+            (integer_type))
+        (identifier)
+        (primitive_type
+            (integer_type)))
+    (const
+        (identifier)
+        (identifier)
+        (struct_ctor_call_expression
+          (path_expression
+            (simple_path_segment
+              (identifier)))
+          (single_struct_argument
+            (identifier)
+            (literal_expression
+              (integer_literal)))
+          (single_struct_argument
+            (identifier)
+            (literal_expression
+              (integer_literal))))))
+
+
