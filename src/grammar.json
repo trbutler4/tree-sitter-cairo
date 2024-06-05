@@ -1796,7 +1796,7 @@
         },
         {
           "type": "STRING",
-          "value": "func"
+          "value": "fn"
         },
         {
           "type": "FIELD",
@@ -1852,7 +1852,7 @@
         },
         {
           "type": "STRING",
-          "value": "func"
+          "value": "fn"
         },
         {
           "type": "SYMBOL",
@@ -2011,7 +2011,7 @@
         },
         {
           "type": "STRING",
-          "value": "func"
+          "value": "fn"
         },
         {
           "type": "FIELD",

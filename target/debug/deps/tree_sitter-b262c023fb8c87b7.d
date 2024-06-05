@@ -1,0 +1,9 @@
+/Users/iv-personal/tree-sitter-cairo/target/debug/deps/libtree_sitter-b262c023fb8c87b7.rmeta: /Users/iv-personal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.20.10/binding_rust/lib.rs /Users/iv-personal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.20.10/binding_rust/ffi.rs /Users/iv-personal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.20.10/binding_rust/util.rs /Users/iv-personal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.20.10/binding_rust/./bindings.rs /Users/iv-personal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.20.10/binding_rust/../include/tree_sitter/parser.h
+
+/Users/iv-personal/tree-sitter-cairo/target/debug/deps/tree_sitter-b262c023fb8c87b7.d: /Users/iv-personal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.20.10/binding_rust/lib.rs /Users/iv-personal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.20.10/binding_rust/ffi.rs /Users/iv-personal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.20.10/binding_rust/util.rs /Users/iv-personal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.20.10/binding_rust/./bindings.rs /Users/iv-personal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.20.10/binding_rust/../include/tree_sitter/parser.h
+
+/Users/iv-personal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.20.10/binding_rust/lib.rs:
+/Users/iv-personal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.20.10/binding_rust/ffi.rs:
+/Users/iv-personal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.20.10/binding_rust/util.rs:
+/Users/iv-personal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.20.10/binding_rust/./bindings.rs:
+/Users/iv-personal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.20.10/binding_rust/../include/tree_sitter/parser.h:

@@ -2780,7 +2780,7 @@
             "named": true
           },
           {
-            "type": "func",
+            "type": "fn",
             "named": false
           },
           {
@@ -3298,7 +3298,7 @@
     "named": false
   },
   {
-    "type": "func",
+    "type": "fn",
     "named": false
   },
   {
