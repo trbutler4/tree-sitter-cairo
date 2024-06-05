@@ -3605,7 +3605,51 @@
     "named": false
   },
   {
+    "type": "u128_is_zero",
+    "named": false
+  },
+  {
     "type": "u128_sqrt",
+    "named": false
+  },
+  {
+    "type": "u16",
+    "named": false
+  },
+  {
+    "type": "u16_const",
+    "named": false
+  },
+  {
+    "type": "u256",
+    "named": false
+  },
+  {
+    "type": "u256_sqrt",
+    "named": false
+  },
+  {
+    "type": "u32",
+    "named": false
+  },
+  {
+    "type": "u32_const",
+    "named": false
+  },
+  {
+    "type": "u64",
+    "named": false
+  },
+  {
+    "type": "u64_const",
+    "named": false
+  },
+  {
+    "type": "u8",
+    "named": false
+  },
+  {
+    "type": "u8_const",
     "named": false
   },
   {

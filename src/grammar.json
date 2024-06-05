@@ -190,6 +190,50 @@
           },
           {
             "type": "STRING",
+            "value": "u128_is_zero"
+          },
+          {
+            "type": "STRING",
+            "value": "u8"
+          },
+          {
+            "type": "STRING",
+            "value": "u8_const"
+          },
+          {
+            "type": "STRING",
+            "value": "u16"
+          },
+          {
+            "type": "STRING",
+            "value": "u16_const"
+          },
+          {
+            "type": "STRING",
+            "value": "u32"
+          },
+          {
+            "type": "STRING",
+            "value": "u32_const"
+          },
+          {
+            "type": "STRING",
+            "value": "u64"
+          },
+          {
+            "type": "STRING",
+            "value": "u64_const"
+          },
+          {
+            "type": "STRING",
+            "value": "u256"
+          },
+          {
+            "type": "STRING",
+            "value": "u256_sqrt"
+          },
+          {
+            "type": "STRING",
             "value": "Felt252TryIntoU8"
           },
           {
