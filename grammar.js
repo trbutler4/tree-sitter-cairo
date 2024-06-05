@@ -26,6 +26,7 @@ module.exports = grammar({
       choice(
         $._simple_identifier,
         $.primitive_type,
+        $.integer_type,
         $.path_expression,
         $.literal_expression,
         $.boolean_expression,
@@ -42,7 +43,43 @@ module.exports = grammar({
       ),
     _simple_identifier: ($) => prec(1, $.identifier),
 
-    primitive_type: ($) => prec(1, choice("felt", "bool")),
+    primitive_type: ($) => prec(1, choice(
+      "felt252", 
+      "bool",
+    )),
+
+    integer_type: ($) => prec(1, choice(
+      "i8", 
+      "i8_const",
+      "I8IntoFelt252",
+      "i16",
+      "i16_const",
+      "I16IntoFelt252",
+      "i32",
+      "i32_const",
+      "I32IntoFelt252",
+      "i64",
+      "i64_const",
+      "I64IntoFelt252",
+      "i128",
+      "i128_const",
+      "I128IntoFelt252",
+      "u128",
+      "u128_const",
+      "u128_sqrt",
+      "Felt252TryIntoU8",
+      "U8IntoFelt252",
+      "Felt252TryIntoU16",
+      "U16IntoFelt252",
+      "Felt252TryIntoU32",
+      "U32IntoFelt252",
+      "Felt252TryIntoU64",
+      "U64IntoFelt252",
+      "Felt252TryIntoU128",
+      "U128IntoFelt252",
+      "Felt252IntoU256"
+    )),
+
 
     // Path Expression
     path_expression: ($) => prec.right(charSep1($._path_segment, "::")),
@@ -60,12 +97,12 @@ module.exports = grammar({
       prec.right(10, seq("<", commaSep1($._expression), ">")),
 
     // Boolean expressions (separate from literals to adhere to cairo's compiler)
-    boolean_expression: ($) => choice("true", "false"),
+    boolean_expression: () => choice("true", "false"),
 
     // Literal expressions
     literal_expression: ($) => choice($.integer_literal),
 
-    integer_literal: ($) => /[0-9]+/,
+    integer_literal: () => /[0-9]+/,
 
     // Parenthesized expression
     parenthesized_expression: ($) =>
@@ -77,7 +114,7 @@ module.exports = grammar({
         seq(field("operator", $._unary_operator), field("rhs", $._expression)),
       ),
 
-    _unary_operator: ($) => choice("!", "-"),
+    _unary_operator: () => choice("!", "-"),
 
     // Binary expressions
     binary_expression: ($) =>
@@ -89,7 +126,7 @@ module.exports = grammar({
         ),
       ),
 
-    _binary_operator: ($) =>
+    _binary_operator: () =>
       choice(
         ".",
         "!",
