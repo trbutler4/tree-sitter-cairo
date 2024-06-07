@@ -3774,6 +3774,10 @@
     "named": false
   },
   {
+    "type": "usize",
+    "named": false
+  },
+  {
     "type": "with",
     "named": false
   },

@@ -43,39 +43,39 @@ module.exports = grammar({
       ),
     _simple_identifier: ($) => prec(1, $.identifier),
 
-    primitive_type: ($) => prec(1, choice(
-      "felt252", 
-      "bool",
-      $.integer_type
-    )),
+    primitive_type: ($) => prec(1, choice("felt252", "bool", $.integer_type)),
 
-    integer_type: () => prec(1, choice(
-      "i8", 
-      "i8_const",
-      "i16",
-      "i16_const",
-      "i32",
-      "i32_const",
-      "i64",
-      "i64_const",
-      "i128",
-      "i128_const",
-      "u128",
-      "u128_const",
-      "u128_sqrt",
-      "u128_is_zero",
-      "u8",
-      "u8_const",
-      "u16",
-      "u16_const",
-      "u32", 
-      "u32_const",
-      "u64",
-      "u64_const",
-      "u256",
-      "u256_sqrt",
-    )),
-
+    integer_type: () =>
+      prec(
+        1,
+        choice(
+          "i8",
+          "i8_const",
+          "i16",
+          "i16_const",
+          "i32",
+          "i32_const",
+          "i64",
+          "i64_const",
+          "i128",
+          "i128_const",
+          "u128",
+          "u128_const",
+          "u128_sqrt",
+          "u128_is_zero",
+          "u8",
+          "u8_const",
+          "u16",
+          "u16_const",
+          "u32",
+          "u32_const",
+          "u64",
+          "u64_const",
+          "u256",
+          "u256_sqrt",
+          "usize",
+        ),
+      ),
 
     // Path Expression
     path_expression: ($) => prec.right(charSep1($._path_segment, "::")),
@@ -96,15 +96,12 @@ module.exports = grammar({
     boolean_expression: () => choice("true", "false"),
 
     // Literal expressions
-    literal_expression: ($) => 
-      choice(
-          $.integer_literal,
-          $.string_literal
-      ),
+    literal_expression: ($) => choice($.integer_literal, $.string_literal),
 
     integer_literal: () => /[0-9]+/,
 
-    string_literal: () => seq("'", /.*/, "'"),
+    string_literal: ($) => seq("'", $._string_content, "'"),
+    _string_content: () => /[^'\\]+/,
 
     // Parenthesized expression
     parenthesized_expression: ($) =>
@@ -328,7 +325,7 @@ module.exports = grammar({
         $.impl,
         $.struct,
         $.enum,
-        $.const
+        $.const,
       ),
 
     module: ($) =>
@@ -414,7 +411,6 @@ module.exports = grammar({
         "}",
       ),
 
-
     enum: ($) =>
       seq(
         repeat($.attribute),
@@ -427,13 +423,13 @@ module.exports = grammar({
         "}",
       ),
 
-    const: ($) => 
+    const: ($) =>
       seq(
-          "const",
-          field("name", $.identifier),
-          optional($._type_clause),
-          optional(seq("=", field("value", $._expression))),
-          ";",
+        "const",
+        field("name", $.identifier),
+        optional($._type_clause),
+        optional(seq("=", field("value", $._expression))),
+        ";",
       ),
 
     use: ($) =>

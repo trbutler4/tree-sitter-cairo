@@ -1,5 +1,5 @@
 ============================
-basic let 
+basic let
 ============================
 
 fn main() {
@@ -17,3 +17,23 @@ fn main() {
                     (identifier))
                 (literal_expression
                     (integer_literal))))))
+
+============================
+basic let
+============================
+
+fn main() {
+    let greeting = 'hello world';
+}
+
+-----------------------------
+
+(source_file
+    (free_function
+        (identifier)
+        (block_expression
+            (let_statement
+                (pattern_identifier
+                    (identifier))
+                (literal_expression
+                    (string_literal))))))

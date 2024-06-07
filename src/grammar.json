@@ -211,6 +211,10 @@
           {
             "type": "STRING",
             "value": "u256_sqrt"
+          },
+          {
+            "type": "STRING",
+            "value": "usize"
           }
         ]
       }
@@ -375,14 +379,18 @@
           "value": "'"
         },
         {
-          "type": "PATTERN",
-          "value": ".*"
+          "type": "SYMBOL",
+          "name": "_string_content"
         },
         {
           "type": "STRING",
           "value": "'"
         }
       ]
+    },
+    "_string_content": {
+      "type": "PATTERN",
+      "value": "[^'\\\\]+"
     },
     "parenthesized_expression": {
       "type": "SEQ",

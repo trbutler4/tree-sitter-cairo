@@ -37,9 +37,10 @@ enum AnyEnum {
         (primitive_type)
         (identifier)
         (tuple_expression
-          (identifier)
-          (primitive_type
-            (integer_type)))))
+            (primitive_type
+                (integer_type))
+            (primitive_type
+                (integer_type)))))
 
 ========================================================
 simple const
@@ -126,22 +127,24 @@ const ENUM_INSTANCE: AnyEnum = AnyEnum::A('any enum');
 --------------------------------------------------------
 
 (source_file
-      (enum
+    (enum
         (identifier)
         (identifier)
         (primitive_type)
         (identifier)
         (tuple_expression
-          (identifier)
-          (primitive_type
+            (primitive_type
+            (integer_type))
+            (primitive_type
             (integer_type))))
-      (const
+    (const
         (identifier)
         (identifier)
         (function_call_expression
-          (path_expression
+            (path_expression
             (simple_path_segment
-              (identifier))
+                (identifier))
             (simple_path_segment
-              (identifier)))
-            (string_literal))))
+                (identifier)))
+            (literal_expression
+                (string_literal)))))
