@@ -1,0 +1,35 @@
+========================================================
+while expression
+========================================================
+
+fn main() {
+    let mut x = 0;
+    while x < 5 {
+        x += 1;
+    };
+}
+
+--------------------------------------------------------
+
+(source_file
+    (free_function
+        (identifier)
+        (block_expression
+            (let_statement
+                (pattern_identifier
+                    (modifier)
+                    (identifier))
+                (literal_expression
+                    (integer_literal)))
+            (expression_statement
+                (while_expression
+                    (binary_expression
+                        (identifier)
+                        (literal_expression
+                            (integer_literal)))
+                    (block_expression
+                    (expression_statement
+                        (binary_expression
+                        (identifier)
+                            (literal_expression
+                                (integer_literal))))))))))

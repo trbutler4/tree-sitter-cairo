@@ -25,8 +25,8 @@ module.exports = grammar({
     _expression: ($) =>
       choice(
         $._simple_identifier,
-        $.primitive_type, // TODO: moves this?
-        $.integer_type, // TODO: move this?
+        $.primitive_type,
+        $.integer_type,
         $.path_expression,
         $.literal_expression,
         $.boolean_expression,
@@ -40,6 +40,7 @@ module.exports = grammar({
         $.match_expression,
         $.if_expression,
         $.error_propagation_expression,
+        $.while_expression,
       ),
     _simple_identifier: ($) => prec(1, $.identifier),
 
@@ -143,6 +144,7 @@ module.exports = grammar({
         "<=",
         ">",
         ">=",
+        "+=",
       ),
 
     // Tuple expressions
@@ -190,6 +192,7 @@ module.exports = grammar({
       seq(field("pattern", $._pattern), "=>", field("value", $._expression)),
 
     // If expressions
+    // TODO: change this to a statement?
     if_expression: ($) =>
       seq(
         "if",
@@ -200,6 +203,14 @@ module.exports = grammar({
       ),
     else_if_clause: ($) => seq("else", "if", $._expression, $.block_expression),
     else_clause: ($) => seq("else", $.block_expression),
+
+    // while loops
+    while_expression: ($) =>
+      seq(
+        "while",
+        field("condition", $._expression),
+        field("body", $.block_expression),
+      ),
 
     // TODO: block or if
 

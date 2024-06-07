@@ -78,6 +78,10 @@
         {
           "type": "SYMBOL",
           "name": "error_propagation_expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "while_expression"
         }
       ]
     },
@@ -550,6 +554,10 @@
         {
           "type": "STRING",
           "value": ">="
+        },
+        {
+          "type": "STRING",
+          "value": "+="
         }
       ]
     },
@@ -1010,6 +1018,31 @@
         {
           "type": "SYMBOL",
           "name": "block_expression"
+        }
+      ]
+    },
+    "while_expression": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "while"
+        },
+        {
+          "type": "FIELD",
+          "name": "condition",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_expression"
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "body",
+          "content": {
+            "type": "SYMBOL",
+            "name": "block_expression"
+          }
         }
       ]
     },

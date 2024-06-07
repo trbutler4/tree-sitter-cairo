@@ -1,0 +1,1 @@
+/Users/iv-personal/tree-sitter-cairo/target/debug/libtree_sitter_cairo.rlib: /Users/iv-personal/tree-sitter-cairo/bindings/rust/build.rs /Users/iv-personal/tree-sitter-cairo/bindings/rust/lib.rs /Users/iv-personal/tree-sitter-cairo/src/node-types.json /Users/iv-personal/tree-sitter-cairo/src/parser.c
