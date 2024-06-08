@@ -339,6 +339,7 @@ module.exports = grammar({
         $.use,
         $.free_function,
         $.extern_function,
+        $.pub_function,
         $.extern_type,
         $.trait,
         $.impl,
@@ -373,6 +374,12 @@ module.exports = grammar({
         $._function_signature,
         $.block_expression,
       ),
+
+    pub_function: ($) => 
+        seq(
+            "pub",
+            $.free_function
+        ),
 
     extern_type: ($) =>
       seq(

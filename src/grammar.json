@@ -1861,6 +1861,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "pub_function"
+        },
+        {
+          "type": "SYMBOL",
           "name": "extern_type"
         },
         {
@@ -2077,6 +2081,19 @@
         {
           "type": "SYMBOL",
           "name": "block_expression"
+        }
+      ]
+    },
+    "pub_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "pub"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "free_function"
         }
       ]
     },

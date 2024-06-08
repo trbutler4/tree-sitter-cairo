@@ -1,0 +1,54 @@
+========================================================
+fib 
+========================================================
+
+// Calculates fib...
+pub fn fib(a: felt252, b: felt252, n: felt252) -> felt252 {
+    match n {
+        0 => a,
+        _ => fib(b, a + b, n - 1),
+    }
+}
+
+--------------------------------------------------------
+
+(source_file
+    (comment)
+    (pub_function
+        (free_function
+            (identifier)
+            (param
+                (identifier)
+                (primitive_type)
+            )
+            (param
+                (identifier)
+                (primitive_type)
+            )
+            (param
+                (identifier)
+                (primitive_type)
+            )
+            (primitive_type)
+            (block_expression
+               (expression_statement
+              (match_expression
+                (identifier)
+                (match_arm
+                  (pattern_literal
+                    (literal_expression
+                      (integer_literal)))
+                  (identifier))
+                (match_arm
+                  (function_call_expression
+                    (path_expression
+                      (simple_path_segment
+                        (identifier)))
+                    (identifier)
+                    (binary_expression
+                      (identifier)
+                      (identifier))
+                    (binary_expression
+                      (identifier)
+                      (literal_expression
+                        (integer_literal))))))))))) 
