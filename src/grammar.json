@@ -82,6 +82,10 @@
         {
           "type": "SYMBOL",
           "name": "while_expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "loop_expression"
         }
       ]
     },
@@ -1035,6 +1039,23 @@
             "type": "SYMBOL",
             "name": "_expression"
           }
+        },
+        {
+          "type": "FIELD",
+          "name": "body",
+          "content": {
+            "type": "SYMBOL",
+            "name": "block_expression"
+          }
+        }
+      ]
+    },
+    "loop_expression": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "loop"
         },
         {
           "type": "FIELD",

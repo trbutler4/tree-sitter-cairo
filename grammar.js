@@ -41,6 +41,7 @@ module.exports = grammar({
         $.if_expression,
         $.error_propagation_expression,
         $.while_expression,
+        $.loop_expression
       ),
     _simple_identifier: ($) => prec(1, $.identifier),
 
@@ -204,11 +205,18 @@ module.exports = grammar({
     else_if_clause: ($) => seq("else", "if", $._expression, $.block_expression),
     else_clause: ($) => seq("else", $.block_expression),
 
-    // while loops
+    // while loop
     while_expression: ($) =>
       seq(
         "while",
         field("condition", $._expression),
+        field("body", $.block_expression),
+      ),
+
+    // basic loop
+    loop_expression: ($) =>
+      seq(
+        "loop",
         field("body", $.block_expression),
       ),
 
