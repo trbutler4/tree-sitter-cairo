@@ -44,6 +44,7 @@
 "if" @keyword
 "else" @keyword
 "match" @keyword
+"pub" @keyword
 
 "(" @punctuation.bracket
 ")" @punctuation.bracket
