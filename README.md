@@ -25,10 +25,10 @@ binding.gyp
 
 ### References
 -> Language Examples
-https://github.com/starkware-libs/cairo/blob/main/examples
+https://github.com/starkware-libs/cairo/tree/main/examples
 
 -> Soft language specification
-https://github.com/starkware-libs/cairo/blob/main/crates/syntax_codegen/src/cairo_spec.rs
+https://github.com/starkware-libs/cairo/blob/main/crates/cairo-lang-syntax-codegen/src/cairo_spec.rs
 
 -> Cairo pre 1.0 grammar
 https://github.com/archseer/tree-sitter-cairo
