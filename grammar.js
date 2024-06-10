@@ -76,6 +76,7 @@ module.exports = grammar({
           "u256",
           "u256_sqrt",
           "usize",
+          "isize"
         ),
       ),
 
@@ -375,11 +376,11 @@ module.exports = grammar({
         $.block_expression,
       ),
 
-    pub_function: ($) => 
-        seq(
-            "pub",
-            $.free_function
-        ),
+    pub_function: ($) =>
+      seq(
+        "pub",
+        $.free_function
+      ),
 
     extern_type: ($) =>
       seq(
