@@ -14,10 +14,10 @@ struct AnyStruct {
         (identifier)
         (identifier)
         (primitive_type
-            (integer_type))
+            (numeric_type))
         (identifier)
         (primitive_type
-            (integer_type))))
+            (numeric_type))))
 
 ========================================================
 simple enum
@@ -38,9 +38,9 @@ enum AnyEnum {
         (identifier)
         (tuple_expression
             (primitive_type
-                (integer_type))
+                (numeric_type))
             (primitive_type
-                (integer_type)))))
+                (numeric_type)))))
 
 ========================================================
 simple const
@@ -69,7 +69,7 @@ const EXAMPLE: u32 = 100;
     (const
         (identifier)
         (primitive_type
-            (integer_type))
+            (numeric_type))
         (literal_expression
             (integer_literal))))
 
@@ -92,10 +92,10 @@ const STRUCT_INSTANCE: AnyStruct = AnyStruct { a: 0, b: 1 };
         (identifier)
         (identifier)
         (primitive_type
-            (integer_type))
+            (numeric_type))
         (identifier)
         (primitive_type
-            (integer_type)))
+            (numeric_type)))
     (const
         (identifier)
         (identifier)
@@ -134,9 +134,9 @@ const ENUM_INSTANCE: AnyEnum = AnyEnum::A('any enum');
         (identifier)
         (tuple_expression
             (primitive_type
-            (integer_type))
+            (numeric_type))
             (primitive_type
-            (integer_type))))
+            (numeric_type))))
     (const
         (identifier)
         (identifier)

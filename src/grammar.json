@@ -25,7 +25,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "integer_type"
+          "name": "numeric_type"
         },
         {
           "type": "SYMBOL",
@@ -113,12 +113,12 @@
           },
           {
             "type": "SYMBOL",
-            "name": "integer_type"
+            "name": "numeric_type"
           }
         ]
       }
     },
-    "integer_type": {
+    "numeric_type": {
       "type": "PREC",
       "value": 1,
       "content": {
@@ -223,6 +223,10 @@
           {
             "type": "STRING",
             "value": "usize"
+          },
+          {
+            "type": "STRING",
+            "value": "isize"
           }
         ]
       }

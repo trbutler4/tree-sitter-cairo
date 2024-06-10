@@ -26,7 +26,7 @@ module.exports = grammar({
       choice(
         $._simple_identifier,
         $.primitive_type,
-        $.integer_type,
+        $.numeric_type,
         $.path_expression,
         $.literal_expression,
         $.boolean_expression,
@@ -45,9 +45,9 @@ module.exports = grammar({
       ),
     _simple_identifier: ($) => prec(1, $.identifier),
 
-    primitive_type: ($) => prec(1, choice("felt252", "bool", $.integer_type)),
+    primitive_type: ($) => prec(1, choice("felt252", "bool", $.numeric_type)),
 
-    integer_type: () =>
+    numeric_type: () =>
       prec(
         1,
         choice(
